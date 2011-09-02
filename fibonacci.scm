@@ -1,7 +1,7 @@
 (define (fibonacci x)
-  (fib-iter 1 x (cons 1)))
+  (fib-iter 1 x (list 1 0)))
 (define (fib-iter cur max fibs)
-  (cond ((> cur max) fibs)
+  (cond ((= cur max) fibs)
 	(else 
 	 (fib-iter 
 	  (+ cur 1)
@@ -12,3 +12,4 @@
 	    (car (cdr fibs)))
 	   fibs)))))
 (fibonacci 4)
+
